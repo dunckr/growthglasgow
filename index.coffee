@@ -18,7 +18,7 @@ app.set "port", process.env.PORT || 3000
 app.set "views", path.join(__dirname, "/private/views")
 app.set "view engine", "hbs"
 app.engine "html", hbs.__express
-app.use express.static(path.join(__dirname, "/public"))
+app.use express.static(path.join(__dirname, "/build"))
 app.use session
   secret: "keyboard"
   saveUninitialized: true
