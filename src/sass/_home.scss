@@ -193,6 +193,16 @@ nav {
   background: #3D424E;
   color: $text-white;
 }
+.social {
+  text-align: center;
+  .icon {
+    color: $icon-color;
+    font-size: 100px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
 @media (min-width: $screen-sm-min) {
   .jumbo {
     background-image: url("images/jumbo-sm.jpg");

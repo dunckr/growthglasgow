@@ -10,7 +10,6 @@ Constants = require "./private/constants"
 hbs = require "hbs"
 User = require "./private/models/user"
 # todo use routes..
-# todo use forever..
 
 app = express()
 app.use compression()
@@ -37,6 +36,7 @@ passport.use new TwitterStrategy
     if err
       return done(err)
     done null, user
+
 app.get "/auth/twitter", passport.authenticate("twitter")
 app.get "/auth/twitter/callback", passport.authenticate("twitter", successRedirect: "/", failureRedirect: "/")
 
