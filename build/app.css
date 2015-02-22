@@ -702,7 +702,7 @@ nav{float:right;font-size:80px;a:hover;a-text-decoration:none}
 .map-wrapper{position:relative}
 #map{position:relative;padding-bottom:40%;height:0;overflow:hidden}
 #map iframe{position:absolute;top:0;left:0;width:100%;height:100%}
-.map-overlay{position:absolute;width:350px;top:100px;left:10px;z-index:99}
+.map-overlay{position:absolute;width:300px;top:100px;left:10px;z-index:99}
 .map-overlay .panel-body{text-align:center}
 .map-overlay .icon{color:#8F76C7;font-size:60px}
 @media (min-width:992px){.map-overlay{width:400px}}
