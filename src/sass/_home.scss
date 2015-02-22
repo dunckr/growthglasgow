@@ -1,22 +1,28 @@
-$bg-dark:#2B3745;
+$bg-white:white;
+ $bg-dark:#2B3745;
+ $text-grey:#B5BCC2;
+ $text-white:white;
+ $text-dark:#2B3745;
+ $text-link:#3F53A5;
+ $icon-color:#8F76C7;
+ $button-color:#485AA7;
  html {
   display: block;
 }
 body {
-  font-family: 'Nunito', sans-serif;
-  /*font-size: 14px;*/
-  /*line-height: 1.42857;*/
-  /*margin: 0px;*/
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 h3 {
   font-style: normal;
@@ -27,6 +33,11 @@ h3 {
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
+  text-transform: uppercase;
+}
+p {
+  font-size: 18px;
+  line-height: 40px;
 }
 li {
   list-style: none;
@@ -38,34 +49,176 @@ li {
   margin-right: auto;
   margin-left: auto;
 }
-.right {
-  float: right!important;
+nav {
+  float: right;
+  font-size: 80px;
+  a: hover {
+    text-decoration: none;
+  }
 }
 .jumbo {
+  text-align: center;
   background-image: url("images/jumbo.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
+  .title {
+    padding-top: 100px;
+  }
+  h1 {
+    color: $text-white;
+  }
+  h3 {
+    color: $text-grey;
+  }
+  p {
+    color: $text-white;
+    font-size: 24px;
+  }
+  b {
+    color: $text-link;
+  }
+}
+.divider {
+  margin: 50px;
+  border-top: 1px solid rgba(255, 255, 255, .25);
 }
 .guests {
-  background-color: $bg-dark;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  .list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  img {
+    width: 120px;
+  }
+  h1 {
+    color: $text-white;
+  }
+  h3 {
+    color: $text-grey;
+  }
 }
 .event-header {
-  background-color: white;
+  background-image: url("images/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  margin-top: 100px;
+  padding-top: 0;
+  padding-bottom: 160px;
+  background-color: $bg-dark;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  text-align: left;
+  .icon {
+    color: $icon-color;
+    font-size: 60px;
+    float: left;
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+  img {
+    padding-top: 10px;
+    width: 100px;
+  }
+  h1 {
+    color: $text-white;
+  }
+}
+.event-title {
+  padding: 20px 0 40px 0;
+  background-color: $bg-white;
+  h2 {
+    color: $text-link;
+  }
 }
 .event {
-  background-color: #2B3745;
+  background-color: $bg-dark;
+  .icon {
+    font-size: 80px;
+    color: $icon-color;
+  }
 }
 .card {
-  background-color: white;
+  padding-top: 0;
+  background-color: $bg-white;
   box-shadow: 0 40px 40px rgba(0, 0, 0, .25);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  .speaker-profile {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .join {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
 }
 .sponsors {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
   background: linear-gradient(0deg, #987ACB, #3E52A4);
+  .list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .icon {
+    font-size: 80px;
+  }
+  .add {
+    padding-top: 50px;
+  }
+  img {
+    width: 120px;
+  }
+  h1 {
+    color: $text-white;
+  }
+  h3 {
+    color: $text-grey;
+  }
 }
-@media (min-width: 640px) {}@media (min-width: 768px) {
+.speaker-profile {
+  img {
+    width: 150px;
+  }
+}
+.action {
+  color: $text-white;
+  background: $button-color;
+  border: 0;
+  width: 200px;
+  height: 65px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.action:hover {
+  background: #3D424E;
+  color: $text-white;
+}
+$screen-sm-min:768px;
+@media (min-width: $screen-sm-min) {
+  .jumbo {
+    background-image: url("images/jumbo-sm.jpg");
+  }
+}
+$screen-md-min:992px;
+@media (min-width: $screen-md-min) {
+  .jumbo {
+    background-image: url("images/jumbo-md.jpg");
+  }
   .container {
     max-width: 730px;
   }
 }
-@media (min-width: 1200px) {}
+$screen-lg-min:1200px;
+@media (min-width: $screen-lg-min) {
+  .jumbo {
+    background-image: url("images/jumbo-lg.jpg");
+  }
+}
