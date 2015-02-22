@@ -9,6 +9,8 @@ TwitterStrategy = require("passport-twitter").Strategy
 Constants = require "./private/constants"
 hbs = require "hbs"
 User = require "./private/models/user"
+# todo use routes..
+# todo use forever..
 
 app = express()
 app.use compression()
