@@ -1,11 +1,3 @@
-$bg-white:white;
- $bg-dark:#2B3745;
- $text-grey:#B5BCC2;
- $text-white:white;
- $text-dark:#2B3745;
- $text-link:#3F53A5;
- $icon-color:#8F76C7;
- $button-color:#485AA7;
  html {
   display: block;
 }
@@ -20,7 +12,7 @@ h1 {
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.4;
-  font-size: 30px;
+  font-size: 28px;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -105,10 +97,8 @@ nav {
   background-image: url("images/banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
   margin-top: 100px;
   padding-top: 0;
-  padding-bottom: 160px;
   background-color: $bg-dark;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -116,9 +106,11 @@ nav {
   .icon {
     color: $icon-color;
     font-size: 60px;
-    float: left;
     padding-left: 30px;
     padding-top: 20px;
+  }
+  .icon-wrapper {
+    text-align: center;
   }
   img {
     padding-top: 10px;
@@ -153,8 +145,8 @@ nav {
     text-align: center;
   }
   .join {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
   }
 }
@@ -201,13 +193,11 @@ nav {
   background: #3D424E;
   color: $text-white;
 }
-$screen-sm-min:768px;
 @media (min-width: $screen-sm-min) {
   .jumbo {
     background-image: url("images/jumbo-sm.jpg");
   }
 }
-$screen-md-min:992px;
 @media (min-width: $screen-md-min) {
   .jumbo {
     background-image: url("images/jumbo-md.jpg");
@@ -215,8 +205,13 @@ $screen-md-min:992px;
   .container {
     max-width: 730px;
   }
+  .event-header {
+    padding-bottom: 160px;
+    .icon-wrapper {
+      padding-top: 20px;
+    }
+  }
 }
-$screen-lg-min:1200px;
 @media (min-width: $screen-lg-min) {
   .jumbo {
     background-image: url("images/jumbo-lg.jpg");

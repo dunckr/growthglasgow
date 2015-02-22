@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Growth Glasgow</title>
   <!--todo meta-->
   <link rel="stylesheet" href="app.css" />
@@ -33,16 +34,16 @@
       </div>
       <div class="container event-header">
         <div class="row">
-          <div class="col-md-2">
+          <div class="icon-wrapper col-md-2">
             <span class="icon -calendar"></span>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-10">
             <h1>Wednesday, March 4</h1>
             <h3>6:30 - 8:30 PM</h3>
           </div>
-          <div class="col-md-3">
-            <!--<span class="icon -speaker"></span>-->
-          </div>
+          <!--<div class="col-md-3">-->
+          <!--<span class="icon -speaker"></span>-->
+          <!--</div>-->
         </div>
       </div>
       <div class="container event-title">
@@ -73,53 +74,22 @@
         </div>
       </div>
       <div class="join">
-        <button class="action" href="#">Count me in</button>
+        <a href="#guests">
+          <button class="action">Count me in</button>
+        </a>
       </div>
     </div>
     <div class="guests container">
+      <a name="guests"></a>
       <div>
         <h1>Guests</h1>
         <h3>a warm welcome to</h3>
       </div>
-      <div class="list row">
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
-        <div class="col-sm-2">
-          <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg"
-          />
-        </div>
+      <div id="guest-list" class="list row">
       </div>
-      <button class="action" href="#">RSVP using Twitter</button>
+      <a href="/auth/twitter">
+        <button class="action">RSVP using Twitter</button>
+      </a>
     </div>
   </section>
   <section class="sponsors">
@@ -133,7 +103,7 @@
           <img class="img-rounded" src="images/rookieOven.png" />
         </a>
       </div>
-      <button class="action" href="#">Become a Sponsor</button>
+      <button id="add-sponsor" class="action" href="#">Become a Sponsor</button>
     </div>
   </section>
   <section class="map">
@@ -142,14 +112,23 @@
       <div class="map-overlay">
         <div class="panel">
           <div class="panel-heading">
-            <span class="icon -location"></span>
-            <h1>Location</h1>
+            <div class="row">
+              <div class="icon-wrapper col-md-2">
+                <span class="icon -location"></span>
+              </div>
+              <div class="col-md-10">
+                <h1>Location</h1>
+              </div>
+            </div>
           </div>
           <div class="panel-body">
             <p>1046 Govan Road</p>
             <p>Glasgow</p>
             <p>G51 3DU</p>
-            <button class="action" href="#">Directions</button>
+            <a href="https://www.google.co.uk/maps/search/1046+Govan+Road++Glasgow++G51+3DU/@55.8639354,-4.3183053,17z"
+            target="_blank">
+              <button class="action">Directions</button>
+            </a>
           </div>
         </div>
       </div>

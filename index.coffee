@@ -3,13 +3,11 @@ session = require "express-session"
 http = require "http"
 path = require "path"
 compression = require "compression"
-#routes = require "./private/routes"
 db = require "./private/db/connect"
 passport = require "passport"
 TwitterStrategy = require("passport-twitter").Strategy
 Constants = require "./private/constants"
 hbs = require "hbs"
-
 User = require "./private/models/user"
 
 app = express()
@@ -27,7 +25,7 @@ app.use session
 passport.use new TwitterStrategy
   consumerKey: Constants.TWITTER_CONSUMER_KEY
   consumerSecret: Constants.TWITTER_CONSUMER_SECRET
-  callbackURL: "http://localhost:3000/auth/twitter/callback"
+  callbackURL: "http://growthglasgow.com/auth/twitter/callback"
 , (token, tokenSecret, profile, done) ->
   user = new User
     username: profile.username
@@ -37,21 +35,11 @@ passport.use new TwitterStrategy
     if err
       return done(err)
     done null, user
-
-app.get "/", (req, res) ->
-  User.find (err, users) ->
-    if err
-      res.render "index"
-    else
-      res.render "index",
-        title: "Express Todo Example"
-        users: users
-
 app.get "/auth/twitter", passport.authenticate("twitter")
+app.get "/auth/twitter/callback", passport.authenticate("twitter", successRedirect: "/", failureRedirect: "/")
 
-app.get "/auth/twitter/callback", passport.authenticate("twitter", successRedirect: "/", failureRedirect: "/error")
-
-app.get "/error", (req, res) ->
-  console.log req, res
+app.get "/users", (req, res) ->
+  User.find().lean().exec (err, users) ->
+    res.end(JSON.stringify(users))
 
 app.listen app.get("port")

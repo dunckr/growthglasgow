@@ -28,7 +28,7 @@
 }
 .map-overlay {
   position: absolute;
-  width: 400px;
+  width: 350px;
   top: 100px;
   left: 10px;
   z-index: 99;
@@ -37,6 +37,11 @@
   }
   .icon {
     color: $icon-color;
-    font-size: 80px;
+    font-size: 60px;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .map-overlay {
+    width: 400px;
   }
 }
