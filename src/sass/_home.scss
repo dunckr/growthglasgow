@@ -1,0 +1,71 @@
+$bg-dark:#2B3745;
+ html {
+  display: block;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  /*font-size: 14px;*/
+  /*line-height: 1.42857;*/
+  /*margin: 0px;*/
+}
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+}
+h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.4;
+}
+li {
+  list-style: none;
+}
+.container {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.right {
+  float: right!important;
+}
+.jumbo {
+  background-image: url("images/jumbo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+.guests {
+  background-color: $bg-dark;
+}
+.event-header {
+  background-color: white;
+}
+.event {
+  background-color: #2B3745;
+}
+.card {
+  background-color: white;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, .25);
+}
+.sponsors {
+  background: linear-gradient(0deg, #987ACB, #3E52A4);
+}
+@media (min-width: 640px) {}@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+@media (min-width: 1200px) {}
