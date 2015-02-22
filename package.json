@@ -5,7 +5,7 @@
   "main": "index.js",
   "browser": {
     "underscore": "backbone/node_modules/underscore",
-    "plugin": "./src/javascript/vendor/jquery-plugin.js"
+    "jquery": "jquery/dist/jquery"
   },
   "browserify": {
     "transform": [
