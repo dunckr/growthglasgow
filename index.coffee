@@ -26,7 +26,7 @@ app.use session
 passport.use new TwitterStrategy
   consumerKey: Constants.TWITTER_CONSUMER_KEY
   consumerSecret: Constants.TWITTER_CONSUMER_SECRET
-  callbackURL: "http://growthglasgow.com/auth/twitter/callback"
+  callbackURL: "http://www.growthglasgow.com/auth/twitter/callback"
 , (token, tokenSecret, profile, done) ->
   user = new User
     username: profile.username
