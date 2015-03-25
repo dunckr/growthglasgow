@@ -667,7 +667,7 @@ nav{float:right;font-size:80px;a:hover;a-text-decoration:none}
 .guests img{width:120px;height:120px}
 .guests h1{color:#fff}
 .guests h3{color:#B5BCC2}
-.event-header{background-image:url(images/banner.jpg);background-repeat:no-repeat;background-position:center center;margin-top:100px;padding-top:0;background-color:#2B3745;border-top-left-radius:30px;border-top-right-radius:30px;text-align:left}
+.event-header{background-image:url(images/bg.jpg);background-repeat:no-repeat;background-position:center center;background-size:cover;margin-top:100px;padding-top:0;background-color:#2B3745;border-top-left-radius:30px;border-top-right-radius:30px;text-align:left}
 .event-header .icon{color:#8F76C7;font-size:60px;padding-left:30px;padding-top:20px}
 .event-header .icon-wrapper{text-align:center}
 .event-header img{padding-top:10px;width:100px}
@@ -696,7 +696,7 @@ nav{float:right;font-size:80px;a:hover;a-text-decoration:none}
 @media (min-width:768px){.jumbo{background-image:url(images/jumbo-sm.jpg)}}
 @media (min-width:992px){.jumbo{background-image:url(images/jumbo-md.jpg)}
 .container{max-width:730px}
-.event-header{padding-bottom:160px}
+.event-header{padding-top:30px;padding-bottom:30px}
 .event-header .icon-wrapper{padding-top:20px}}
 @media (min-width:1200px){.jumbo{background-image:url(images/jumbo-lg.jpg)}}
 .gm-style-iw *{display:block;width:100%}

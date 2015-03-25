@@ -95,9 +95,10 @@
    }
  }
  .event-header {
-   background-image: url("images/banner.jpg");
+   background-image: url("images/bg.jpg");
    background-repeat: no-repeat;
    background-position: center center;
+   background-size: cover;
    margin-top: 100px;
    padding-top: 0;
    background-color: $bg-dark;
@@ -220,7 +221,8 @@
      max-width: 730px;
    }
    .event-header {
-     padding-bottom: 160px;
+     padding-top: 30px;
+     padding-bottom: 30px;
      .icon-wrapper {
        padding-top: 20px;
      }
