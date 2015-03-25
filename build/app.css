@@ -50,6 +50,7 @@ img{vertical-align:middle}
 hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+[role=button]{cursor:pointer}
 .container:after,.container:before{content:" ";display:table}
 .container:after{clear:both}
 @media (min-width:768px){.container{width:750px}}
@@ -285,7 +286,8 @@ output{display:block;padding-top:7px;font-size:14px;line-height:1.42857;color:#5
 .form-control::-moz-placeholder{color:#999;opacity:1}
 .form-control:-ms-input-placeholder{color:#999}
 .form-control::-webkit-input-placeholder{color:#999}
-.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{cursor:false;background-color:#eee;opacity:1}
+.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{background-color:#eee;opacity:1}
+.form-control[disabled],fieldset[disabled] .form-control{cursor:false}
 textarea.form-control{height:auto}
 input[type=search]{-webkit-appearance:none}
 @media screen and (-webkit-min-device-pixel-ratio:0){input[type=date],input[type=time],input[type=datetime-local],input[type=month]{line-height:34px}
@@ -296,10 +298,10 @@ input[type=search]{-webkit-appearance:none}
 .checkbox label,.radio label{min-height:20px;padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer}
 .checkbox input[type=checkbox],.checkbox-inline input[type=checkbox],.radio input[type=radio],.radio-inline input[type=radio]{position:absolute;margin-left:-20px}
 .checkbox+.checkbox,.radio+.radio{margin-top:-5px}
-.checkbox-inline,.radio-inline{display:inline-block;padding-left:20px;margin-bottom:0;vertical-align:middle;font-weight:400;cursor:pointer}
+.checkbox-inline,.radio-inline{position:relative;display:inline-block;padding-left:20px;margin-bottom:0;vertical-align:middle;font-weight:400;cursor:pointer}
 .checkbox-inline+.checkbox-inline,.radio-inline+.radio-inline{margin-top:0;margin-left:10px}
 .checkbox-inline.disabled,.checkbox.disabled label,.radio-inline.disabled,.radio.disabled label,fieldset[disabled] .checkbox label,fieldset[disabled] .checkbox-inline,fieldset[disabled] .radio label,fieldset[disabled] .radio-inline,fieldset[disabled] input[type=checkbox],fieldset[disabled] input[type=radio],input[type=checkbox].disabled,input[type=checkbox][disabled],input[type=radio].disabled,input[type=radio][disabled]{cursor:false}
-.form-control-static{padding-top:7px;padding-bottom:7px;margin-bottom:0}
+.form-control-static{padding-top:7px;padding-bottom:7px;margin-bottom:0;min-height:34px}
 .form-control-static.input-lg,.form-control-static.input-sm{padding-left:0;padding-right:0}
 .input-sm{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}
 select.input-sm{height:30px;line-height:30px}
@@ -307,14 +309,14 @@ select[multiple].input-sm,textarea.input-sm{height:auto}
 .form-group-sm .form-control{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}
 .form-group-sm select.form-control{height:30px;line-height:30px}
 .form-group-sm select[multiple].form-control,.form-group-sm textarea.form-control{height:auto}
-.form-group-sm .form-control-static{height:30px;padding:5px 10px;font-size:12px;line-height:1.5}
+.form-group-sm .form-control-static{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;min-height:32px}
 .input-lg{height:46px;padding:10px 16px;font-size:18px;line-height:1.33333;border-radius:6px}
 select.input-lg{height:46px;line-height:46px}
 select[multiple].input-lg,textarea.input-lg{height:auto}
 .form-group-lg .form-control{height:46px;padding:10px 16px;font-size:18px;line-height:1.33333;border-radius:6px}
 .form-group-lg select.form-control{height:46px;line-height:46px}
 .form-group-lg select[multiple].form-control,.form-group-lg textarea.form-control{height:auto}
-.form-group-lg .form-control-static{height:46px;padding:10px 16px;font-size:18px;line-height:1.33333}
+.form-group-lg .form-control-static{height:46px;padding:10px 16px;font-size:18px;line-height:1.33333;min-height:38px}
 .has-feedback{position:relative}
 .has-feedback .form-control{padding-right:42.5px}
 .form-control-feedback{position:absolute;top:0;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center;pointer-events:none}
@@ -437,8 +439,8 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border:1px solid #ddd}
 @media (min-width:768px){.nav-tabs-justified>li>a,.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}
 .nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border-bottom-color:#fff}}
-.tab-content>.tab-pane{display:none;visibility:hidden}
-.tab-content>.active{display:block;visibility:visible}
+.tab-content>.tab-pane{display:none}
+.tab-content>.active{display:block}
 .nav-tabs .dropdown-menu{margin-top:-1px;border-top-right-radius:0;border-top-left-radius:0}
 .navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}
 .navbar:after,.navbar:before{content:" ";display:table}
@@ -452,7 +454,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .navbar-collapse:after{clear:both}
 .navbar-collapse.in{overflow-y:auto}
 @media (min-width:768px){.navbar-collapse{width:auto;border-top:0;box-shadow:none}
-.navbar-collapse.collapse{display:block!important;visibility:visible!important;height:auto!important;padding-bottom:0;overflow:visible!important}
+.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}
 .navbar-collapse.in{overflow-y:visible}
 .navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-left:0;padding-right:0}}
 .navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse{max-height:340px}

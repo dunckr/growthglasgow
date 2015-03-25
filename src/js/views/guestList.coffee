@@ -4,8 +4,8 @@ Template = (user) ->
   "<div class='col-xs-6 col-sm-4 col-md-2'><img class='img-circle' src='#{user.profile}' /> </div>"
 
 class GuestListView
-  el: "#guest-list"
   endpoint: "/users"
+  el: "#guest-list"
 
   constructor: ->
     @render()

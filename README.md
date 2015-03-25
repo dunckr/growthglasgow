@@ -8,8 +8,7 @@ Event page with RSVP.
 
 #### Run
 
-`node .`
-`gulp`
+`node . && gulp`
 
 #### Env vars
 
