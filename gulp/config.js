@@ -7,6 +7,9 @@ module.exports = {
       baseDir: dest
     }
   },
+  templates: {
+    src: src + '/data/',
+  },
   sass: {
     src: src + '/sass/*.{sass,scss}',
     dest: dest,

@@ -42,14 +42,14 @@
             <span class="icon -calendar"></span>
           </div>
           <div class="col-md-10">
-            <h1>Wednesday, May 6</h1>
+            <h1>{{date}}</h1>
             <h3>6:30 - 8:30 PM</h3>
           </div>
         </div>
       </div>
       <div class="container event-title">
-        <h2>Buddhify & Beyond</h2>
-        <h3>How a side-project turned into a cult app success & what happens next</h3>
+        <h2>{{title}}</h2>
+        <h3>{{subTitle}}</h3>
       </div>
     </div>
   </header>
@@ -62,16 +62,14 @@
           </div>
         </div>
         <div class="col-md-8">
-          <div class="speaker-title">
-            <h3>Rohan Gunatillake</h3>
-            <a href="http://mindfulnesseverywhere.io" target="_blank">
-              <p>Mindfulness Everywhere</p>
+          <div class="speaker.title">
+            <h3>{{speaker.name}}</h3>
+            <a href="{{speaker.website}}" target="_blank">
+              <p>{{speaker.name}}</p>
             </a>
-            <p>
-              Rohan is the creative director of Mindfulness Everywhere, the makers of the best-selling mindfulness app buddhify. In 2012, Wired magazine list him as one of 50 people who will change the world
-            </p>
-            <p>
-              Buddhify reached has reached #1 Health & Fitness app in 40 countries to date and has won multiple awards including 2014 App of the Year in the Scottish Digital Business Awards
+            {% for paragraph in talk %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
             </p>
           </div>
         </div>
