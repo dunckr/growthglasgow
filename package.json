@@ -54,8 +54,8 @@
     "watchify": "^2.2.1"
   },
   "scripts": {
-    "run": "./node_modules/.bin/gulp",
-    "production": "./node_modules/.bin/gulp production"
+    "watch": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp production"
   },
   "repository": {
     "type": "git",
